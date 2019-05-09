@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,5 +8,9 @@
 </head>
 <body>
 <h1>This is My Home Page!!! Read from home.html</h1>
+{{ request.user }}
+
+{{ request.user.is_authenticated }}
 </body>
 </html>
+{% endblock %}
