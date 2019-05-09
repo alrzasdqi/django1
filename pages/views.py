@@ -6,13 +6,14 @@ from django.shortcuts import render
 def home_view(request, *args, **kwargs):
     print(args, kwargs)
     print(request.user)
-    return HttpResponse("<h1>This is My HOME Page!!!</h1>")
+    #return HttpResponse("<h1>This is My HOME Page!!!</h1>")
+    return render(request, "home.html", {})
 
 def contact_view(request, *args, **kwargs):
-    return HttpResponse("<h1>This is My CONTACT Page!</h1>")
+    return render(request, "contact.html", {})
 
 def about_view(request, *args, **kwargs):
-    return HttpResponse("<h1>This is My ABOUT Page!!!</h1>")
+    return render(request, "about.html", {})
 
 def social_view(request, *args, **kwargs):
-    return HttpResponse("<h1>This is My SOCIAL Page!!!</h1>")
+    return render(request, "social.html", {})
